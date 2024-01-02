@@ -1,31 +1,39 @@
-console.log("Xin chao ca lop!");
-
 var myDocument = {
   html: {
     head: {
       title: "Tieu de trang web",
     },
     body: {
-      h1: "Ten mon hoc la ES6+",
+      h1: {
+        content: "Xin chao cac ban",
+      },
+      p: "ten toi la Hoang",
+      div: {
+        div: {},
+      },
     },
   },
 };
 
 // console.log(myDocument);
 
+/**
+ * Có 3 loại node trong DOM: element, attribute, text
+ *
+ * Các cách lấy 1 element trong DOM:
+ *
+ */
+
 var h1Element1 = document.getElementById("tieuDe");
 var h1Element2 = document.getElementsByClassName("title")[0];
-var h1Element3 = document.querySelector("h1.title");
-var h1Element4 = document.querySelectorAll("h1.title")[0];
+var h1Element3 = document.querySelector("h1#tieuDe.title");
+var h1Element4 = document.querySelectorAll("h1#tieuDe.title")[0]; // return NodeList()
 var h1Element5 = document.getElementsByTagName("h1")[0];
-console.log(h1Element1);
-console.log(h1Element2);
-console.log(h1Element3);
-console.log(h1Element4);
-console.log(h1Element5);
-h1Element1.style.backgroundColor = "red";
-
-// Tạo 1 object chứa thông tin cá nhân, rồi in ra màn hình
+// console.log(h1Element1);
+// console.log(h1Element2);
+// console.log(h1Element3);
+// console.log(h1Element4);
+// console.log(h1Element5);
 
 var myInfor = {
   myName: "Nguyễn Minh Hoàng",
@@ -34,24 +42,37 @@ var myInfor = {
   mssv: "PH1234",
 };
 
-var myInforElement = document.getElementsByClassName("myInfor")[0];
-console.log(myInforElement);
-// Chú thích 1 dòng
 /**
- * `` được gọi là cú pháp template string
- * ${Ghi biểu thức, tên biến trong cú pháp template string}
+ * Yêu cầu: Hiển thị thông tin myInfor ra màn hình,
+ * Gợi ý: sử dụng createElement, appenChild innerText, innerHTML...
  */
-myInforElement.innerHTML = `
-<div class="infor-inner">
-  <h2>Tên: ${myInfor.myName}</h2>
-  <div class="age">Tuổi: ${myInfor.age + 1}</div>
-  <div class="address">Địa chỉ: ${myInfor.address}</div>
-  <div>Mã số sinh viên: ${myInfor.mssv}</div>
-</div>
-`;
 
-// Bài tập: in ra màn hình thông tin cá nhân lấy từ biến myInfor.
-// Gợi ý:
-// JS có thể tạo ra element.
-// document.createElement("div")
-// innerText, innerHTML
+var cardElement = document.getElementsByClassName("card")[0];
+console.log(cardElement);
+
+var htmlText = `
+<h2 class="name">Tên: ${myInfor.myName}</h2>
+<div class="age">Tuổi: ${myInfor.age + 1}</div>
+<div>Địa chỉ: ${myInfor.address}</div>
+<div>Mã sinh viên: ${myInfor.mssv}</div>
+`;
+console.log(typeof htmlText);
+cardElement.innerHTML = htmlText;
+
+var ageElement = document.getElementsByClassName("age")[0];
+
+console.log(ageElement);
+ageElement.style.fontWeight = 900;
+
+/**
+ * `` gọi là template string,
+ * Khi muốn gọi biến hoặc biểu thức thì dùng ${biểu thực hoặc biến}
+ */
+
+// Có 2 cách comment trong js:
+// Đây là comment 1 dòng
+/**
+ * Đây là comment nhiều dòng.
+ *
+ *
+ */
