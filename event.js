@@ -4,15 +4,19 @@
 // document.body.appendChild(newElement);
 // document.body.removeChild(newElement);
 
-function login() {
-  console.log("Dang nhap thanh cong!");
+// function login() {
+//   console.log("Dang nhap thanh cong!");
+// }
+
+// // Cach 2:
+// var loginSubmit = document.getElementsByClassName("login")[1];
+// console.log({ loginSubmit });
+// loginSubmit.onclick = login;
+
+// // Cach 3:
+// var loginSubmit3 = document.getElementById("dangNhap");
+// loginSubmit3.addEventListener("click", login);
+
+function register() {
+  // ghi logic vao day
 }
-
-// Cach 2:
-var loginSubmit = document.getElementsByClassName("login")[1];
-console.log(loginSubmit);
-loginSubmit.onclick = login;
-
-// Cach 3:
-var loginSubmit3 = document.getElementById("dangNhap");
-loginSubmit3.addEventListener("click", login);
