@@ -18,5 +18,21 @@
 // loginSubmit3.addEventListener("click", login);
 
 function register() {
-  // ghi logic vao day
+  // Buoc 1: lay gia tri
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var confirmPass = document.getElementById("confirmPass").value;
+  // Buoc 2: Dua vao 1 object
+  var userInfor = {
+    username,
+    password,
+    confirmPass,
+  };
+
+  // BOM = Browser Object Model
+  // Buoc 3: dua userInfor vao localStorage
+
+  localStorage.setItem("userInfor", JSON.stringify(userInfor));
+
+  //JSON = Javascript Object Notation
 }
