@@ -32,5 +32,7 @@ function register() {
     users.push(userInfor);
     // Buoc 3: dua userInfor vao localStorage
     localStorage.setItem("users", JSON.stringify(users));
+    alert("Dang ky thanh cong!");
   }
 }
+// Xây dựng trang đăng nhập, nếu khớp dữ liệu trong localStorage thì báo đăng nhập thành công!
