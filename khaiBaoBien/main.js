@@ -1,11 +1,11 @@
-var a;
-console.log(a);
-{
-  var a = "hoang";
-  var a = "tiến bịp";
-  a = "ngo ba kha";
-  console.log(a);
-}
+// var a;
+// console.log(a);
+// {
+//   var a = "hoang";
+//   var a = "tiến bịp";
+//   a = "ngo ba kha";
+//   console.log(a);
+// }
 // var a; a ="hoang"
 
 /**
@@ -16,13 +16,13 @@ console.log(a);
  * 4. Khai báo với var có thể assign được.
  */
 
-function sum(a, b) {
-  let b = 10;
-  let a = 20;
-  return a + b;
-}
-console.log(b);
-let myName = "hoang";
+// function sum(a, b) {
+//   let b = 10;
+//   let a = 20;
+//   return a + b;
+// }
+// console.log(b);
+// let myName = "hoang";
 // let myName = "Nguyen"
 /**
  * let
@@ -39,3 +39,24 @@ let myName = "hoang";
  * 3. Không thể khai báo lại
  * 4. Const không gán lại được.
  */
+
+let cuongQuoc = "Vietnam";
+cuongQuoc = "My";
+
+// global = toan cuc
+
+function tyGia(sotienUSA) {
+  let tygia = 25000;
+  return sotienUSA * tygia;
+}
+
+// console.log(tygia);
+
+if (3 > 2) {
+  const loiChao = "hello";
+  console.log("3 thi lon hon 2");
+}
+
+console.log(loiChao);
+
+// "strict mode"
