@@ -9,3 +9,10 @@ Vào command line:
 - Dùng nvm cài node: `nvm install v18`
 - Kiểm tra node: `node -v`
 - Chọn dùng version đã cài đặt: `nvm use v18`
+
+### Create project:
+
+`npm create vite project_name`
+`cd project_name`
+`npm i`
+`npm run dev`
