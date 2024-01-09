@@ -1,17 +1,20 @@
 {
   "name": "web501",
-  "version": "1.0.0",
-  "description": "",
-  "main": "JSON.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "json-server db.json -- -w"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "concurrently \"npm run dev\" \"json-server --watch db.json -p 3000\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.0.8"
+  },
   "dependencies": {
-    "json-server": "^1.0.0-alpha.13",
-    "json-server-auth": "^2.1.0"
+    "bootstrap": "^5.3.2",
+    "concurrently": "^8.2.2",
+    "json-server": "^1.0.0-alpha.14"
   }
 }

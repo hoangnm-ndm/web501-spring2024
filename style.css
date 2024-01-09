@@ -1,16 +1,9 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
   font-size: 62.5%;
-}
-
-form {
-  width: 400px;
-  max-width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 24px;
-  margin: 100px auto 0;
 }
