@@ -1,7 +1,7 @@
 import "./style.css";
+import { AboutPage } from "./src/pages/AboutPage";
+import { HomePage } from "./src/pages/HomePage";
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    <h2>Xin chao ca lop!</h2>
-  </div>
-`;
+const app = document.getElementById("app");
+
+app.innerHTML = HomePage();

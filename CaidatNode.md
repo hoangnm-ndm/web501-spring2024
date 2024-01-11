@@ -12,7 +12,7 @@ Vào command line:
 
 ### Create project:
 
-`npm create vite project_name`
-`cd project_name`
-`npm i`
-`npm run dev`
+- Tạo dự án: `npm create vite project_name`
+- Đi vào trong dự án: `cd project_name`
+- Cài đặt thư viện: `npm i`
+- Khởi chạy dự án: `npm run dev`
