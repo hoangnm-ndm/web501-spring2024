@@ -15,6 +15,7 @@
   "dependencies": {
     "bootstrap": "^5.3.2",
     "concurrently": "^8.2.2",
-    "json-server": "^1.0.0-alpha.14"
+    "json-server": "^1.0.0-alpha.14",
+    "navigo": "^8.11.1"
   }
 }
