@@ -1,15 +1,17 @@
-import { HomePage as Home } from "./src/pages/HomePage";
-import "./node_modules/bootstrap/dist/js/bootstrap";
+import "./node_modules/bootstrap/dist/js/bootstrap.min.js";
 import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import "./src/components/Header.js";
-import About from "./src/pages/AboutPage";
-import { Header } from "./src/components/Header";
+import AboutPage from "./src/pages/AboutPage";
+import Navigo from "navigo";
+import HomePage from "./src/pages/HomePage.js";
+import { render } from "./src/utils/common.js";
+import NotFoundPage from "./src/pages/NotFoundPage.js";
 
+const router = new Navigo("/", { linksSelector: "a" });
 const app = document.getElementById("app");
 
-app.innerHTML = About();
-
-/**
- *
- */
+router.on("/", () => render(app, HomePage));
+router.on("/home", () => router.navigate("/"));
+router.on("/about", () => render(app, AboutPage));
+router.notFound(() => render(app, NotFoundPage));
+router.resolve();

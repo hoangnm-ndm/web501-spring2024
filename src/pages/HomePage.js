@@ -20,8 +20,7 @@ const html = datas
   })
   .join("");
 
-export { HomePage, datas };
-// export default HomePage;
+export default HomePage;
 
 /*
  * 1. Sử dụng cú pháp import/export cần type: modules
