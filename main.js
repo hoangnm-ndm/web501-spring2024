@@ -16,12 +16,12 @@ router.on("/about", () => render(app, AboutPage));
 router.on("/signup", () => render(app, SignUpPage), {
   after() {
     const register = () => {
-      var email = document.getElementById("email").value;
-      var password = document.getElementById("password").value;
-      var confirmPass = document.getElementById("confirmPass").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPass = document.getElementById("confirmPass").value;
 
       // Buoc 2: Gom du lieu vao object
-      var userInfor = {
+      const userInfor = {
         email,
         password,
         confirmPass,
