@@ -54,6 +54,7 @@
 
 .message-m {
   width: calc(100% - 30px);
+  font-size: 14px;
 }
 
 .btn-success-m {

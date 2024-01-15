@@ -1,6 +1,6 @@
 const SignUpPage = () => {
-  return `
-  <form action="">
+  return html`
+    <form action="">
       <h1>Đăng ký tài khoản mới!</h1>
       <div class="mb-3">
         <label for="email" class="form-label">Email address</label>
@@ -27,7 +27,6 @@ const SignUpPage = () => {
 
       <p>Đã có tài khoản? Ấn <a href="/login">Đăng nhập</a>ngay!</p>
     </form>
-
   `;
 };
 

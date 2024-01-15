@@ -1,5 +1,5 @@
 const AboutPage = () => {
-  return `ComponentContent`;
+  return html`ComponentContent`;
 };
 
 export default AboutPage;

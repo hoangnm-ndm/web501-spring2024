@@ -1,7 +1,7 @@
 import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./node_modules/bootstrap/dist/js/bootstrap";
-import "./src/styles/style.css";
 import "./src/styles/toastMessage.css";
+import "./src/styles/style.css";
 import Navigo from "navigo";
 import { render } from "./src/utils/common";
 import SignUpPage from "./src/pages/SignUpPage";
@@ -14,13 +14,25 @@ import AboutPage from "./src/pages/AboutPage";
 import ShowToast from "./src/pages/ShowToast";
 import showToast from "./src/utils/toastMessage";
 
+const url = "http://localhost:3000";
+
 const app = document.getElementById("app");
 const router = new Navigo("/", { linksSelector: "a" });
 router.hooks({
   after() {},
 });
-router.on("/home", () => render(app, HomePage));
+router.on("/home", () => render(app, HomePage), {
+  before(done) {
+    fetch(`${url}/products`)
+      .then((res) => res.json())
+      .then((data) => {
+        const products = data;
+      });
+    done();
+  },
+});
 router.on("/about", () => render(app, AboutPage));
+router.on("/shop", () => render(app, HomePage));
 router.on("/toast-demo", () => render(app, ShowToast), {
   after() {
     const handleClickSuccess = document.getElementById("handleClickSuccess");

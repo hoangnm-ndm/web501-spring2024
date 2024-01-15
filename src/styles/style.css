@@ -7,7 +7,12 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#app {
+  margin-top: 24px;
 }
 
 a {
