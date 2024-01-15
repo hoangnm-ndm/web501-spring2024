@@ -1,4 +1,4 @@
-import validationForm from "../validations/auth.valid";
+import { validSignUp } from "../validations/auth.valid";
 
 const users = [];
 const register = () => {
@@ -11,7 +11,7 @@ const register = () => {
     confirmPass,
   };
 
-  if (validationForm(userInfor)) {
+  if (validSignUp(userInfor)) {
     users.push(userInfor);
     localStorage.setItem("users", JSON.stringify(users));
     alert("Dang ky thanh cong!");
