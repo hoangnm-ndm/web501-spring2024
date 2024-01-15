@@ -1,3 +1,4 @@
+import showToast from "../utils/toastMessage";
 import { validLogin } from "../validations/auth.valid";
 
 function login() {
@@ -14,7 +15,7 @@ function login() {
     if (dataUsers && dataUsers.length > 0) {
       dataUsers.some((item) => {
         if (item.email === email && item.password === password) {
-          alert("Dang nhap thanh cong!");
+          showToast("Login successfully!", 3000, "success");
           return;
         }
       });

@@ -1,0 +1,98 @@
+.toast-container-m {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  width: 200px;
+  height: 100vh;
+}
+
+.btn-m {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.toast-m {
+  width: 200px;
+  min-height: 44px;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.success-m {
+  border: 1px solid #4caf50;
+  border-top: 8px solid #4caf50;
+  color: #4caf50;
+}
+
+.warning-m {
+  border: 1px solid #ff8c00;
+  border-top: 8px solid #ff8c00;
+  color: #ff8c00;
+}
+
+.error-m {
+  border: 1px solid red;
+  border-top: 8px solid red;
+  color: red;
+}
+
+.message-wrap-m {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.message-m {
+  width: calc(100% - 30px);
+}
+
+.btn-success-m {
+  color: #fff;
+  background-color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.btn-warning-m {
+  color: #fff;
+  background-color: #ff8c00;
+  border: 1px solid #ff8c00;
+}
+.btn-error-m {
+  color: #fff;
+  background-color: red;
+  border: 1px solid red;
+}
+
+.closeBtn-m {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.closeBtn-m:hover {
+  background-color: blue;
+  color: #fff;
+}

@@ -1,15 +1,17 @@
+import showToast from "../utils/toastMessage";
+
 function validSignUp(user) {
   if (user.email === "" || user.password === "" || user.confirmPass === "") {
-    alert("khong duoc de trong!");
+    showToast("Không được để trống!", 3000, "error");
     return false;
   }
   if (user.password.length < 6) {
-    alert("Password qua ngan!");
+    showToast("Password phải dài hơn 6 ký tự!", 3000, "error");
     return false;
   }
 
   if (user.password !== user.confirmPass) {
-    alert("Mat khau nhap lai khong khop!");
+    showToast("Password không trùng khớp!", 3000, "error");
     return false;
   }
 
@@ -18,11 +20,11 @@ function validSignUp(user) {
 
 function validLogin(user) {
   if (user.email === "" || user.password === "") {
-    alert("khong duoc de trong!");
+    showToast("Không được để trống!", 3000, "error");
     return false;
   }
   if (user.password.length < 6) {
-    alert("Password qua ngan!");
+    showToast("Password phải dài hơn 6 ký tự!", 3000, "error");
     return false;
   }
 

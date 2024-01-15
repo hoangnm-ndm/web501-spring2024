@@ -1,3 +1,4 @@
+import showToast from "../utils/toastMessage";
 import { validSignUp } from "../validations/auth.valid";
 
 const users = [];
@@ -14,7 +15,7 @@ const register = () => {
   if (validSignUp(userInfor)) {
     users.push(userInfor);
     localStorage.setItem("users", JSON.stringify(users));
-    alert("Dang ky thanh cong!");
+    showToast("Register successfully!", 5000, "success");
   }
 };
 export default register;
