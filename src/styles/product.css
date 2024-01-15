@@ -1,0 +1,24 @@
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 260px;
+  height: 360px;
+  margin: 12px;
+  display: inline-block;
+}
+
+.product-image {
+  width: 100%;
+  height: 50%;
+  max-width: 100%;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-price {
+  color: red;
+  font-size: 16px;
+  font-weight: 800;
+}

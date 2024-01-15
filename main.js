@@ -1,6 +1,7 @@
 import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./node_modules/bootstrap/dist/js/bootstrap";
 import "./src/styles/toastMessage.css";
+import "./src/styles/product.css";
 import "./src/styles/style.css";
 import Navigo from "navigo";
 import { render } from "./src/utils/common";
@@ -26,7 +27,7 @@ router.on("/home", () => render(app, HomePage), {
     fetch(`${url}/products`)
       .then((res) => res.json())
       .then((data) => {
-        const products = data;
+        localStorage.setItem("products", JSON.stringify(data));
       });
     done();
   },
