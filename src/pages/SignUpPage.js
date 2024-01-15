@@ -21,7 +21,7 @@ const SignUpPage = () => {
         <input type="password" class="form-control" id="confirmPass" />
       </div>
 
-      <button type="button" id="registerBtn" onclick="register()" class="btn btn-primary w-100">
+      <button type="button" onclick="register()" id="btnRegister" class="btn btn-primary w-100">
         Register
       </button>
     </form>
