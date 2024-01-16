@@ -18,10 +18,19 @@ import showToast from "./src/utils/toastMessage";
 const url = "http://localhost:3000";
 
 const app = document.getElementById("app");
+const products = [];
 const router = new Navigo("/", { linksSelector: "a" });
 router.hooks({
-  after() {},
+  before(done) {
+    fetch(`${url}/products`)
+      .then((res) => res.json())
+      .then((data) => {
+        products.push(...data);
+      });
+    done();
+  },
 });
+console.log(products);
 router.on("/home", () => render(app, HomePage), {
   before(done) {
     fetch(`${url}/products`)
@@ -32,7 +41,7 @@ router.on("/home", () => render(app, HomePage), {
     done();
   },
 });
-router.on("/about", () => render(app, AboutPage));
+router.on("/about", () => render(app, AboutPage()));
 router.on("/shop", () => render(app, HomePage));
 router.on("/toast-demo", () => render(app, ShowToast), {
   after() {
