@@ -18,8 +18,11 @@ function register() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        alert("Dang ky thanh cong!");
+        if (typeof data.user !== "undefined") {
+          alert(`Dang ky thanh cong!, ${data.user.email}`);
+        } else {
+          alert(data);
+        }
       })
       .catch((err) => {
         console.log(err);

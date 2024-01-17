@@ -8,8 +8,6 @@ const SignUp = () => {
       type="email"
       class="form-control"
       id="email"
-      aria-describedby="emailHelp"
-      required
     />
   </div>
   <div class="mb-3">
@@ -19,12 +17,11 @@ const SignUp = () => {
       type="password"
       class="form-control"
       id="password"
-      required
     />
   </div>
   <div class="mb-3">
     <label for="confirmPass" class="form-label">Confirm password</label>
-    <input type="password" class="form-control" id="confirmPass" required />
+    <input type="password" class="form-control" id="confirmPass" />
   </div>
 
   <button type="button" id="btnRegister" class="btn btn-primary">
