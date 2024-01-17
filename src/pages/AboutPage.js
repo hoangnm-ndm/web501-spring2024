@@ -1,5 +1,5 @@
 const AboutPage = () => {
-  return html`ComponentContent`;
+  return /*html*/ `ComponentContent`;
 };
 
 export default AboutPage;

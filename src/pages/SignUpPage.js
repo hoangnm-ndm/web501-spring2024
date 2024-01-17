@@ -21,7 +21,12 @@ const SignUpPage = () => {
         <input type="password" class="form-control" id="confirmPass" />
       </div>
 
-      <button type="button" id="btnRegister" class="btn btn-primary w-100">
+      <button
+        type="button"
+        id="btnRegister"
+        onclick="register()"
+        class="btn btn-primary w-100"
+      >
         Đăng ký
       </button>
 

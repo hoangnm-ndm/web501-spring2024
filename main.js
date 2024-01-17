@@ -30,17 +30,8 @@ router.hooks({
     done();
   },
 });
-console.log(products);
-router.on("/home", () => render(app, HomePage), {
-  before(done) {
-    fetch(`${url}/products`)
-      .then((res) => res.json())
-      .then((data) => {
-        localStorage.setItem("products", JSON.stringify(data));
-      });
-    done();
-  },
-});
+console.log(products.length);
+router.on("/home", () => render(app, HomePage(products)));
 router.on("/about", () => render(app, AboutPage()));
 router.on("/shop", () => render(app, HomePage));
 router.on("/toast-demo", () => render(app, ShowToast), {
@@ -63,10 +54,14 @@ router.on("/toast-demo", () => render(app, ShowToast), {
   },
 });
 router.on("/signup", () => render(app, SignUpPage), {
-  after() {
-    const btnRegister = document.getElementById("btnRegister");
-    btnRegister.onclick = register;
+  before(done) {
+    () => register();
+    done();
   },
+  // after() {
+  //   const btnRegister = document.getElementById("btnRegister");
+  //   btnRegister.onclick = register;
+  // },
 });
 
 router.on("/signin", () => render(app, SignInPage), {
