@@ -1,7 +1,7 @@
-const SignUp = () => {
+const SignIn = () => {
   return /*html*/ `
   <form>
-  <h1>Register</h1>
+  <h1>Login</h1>
   <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
     <input
@@ -22,17 +22,12 @@ const SignUp = () => {
       required
     />
   </div>
-  <div class="mb-3">
-    <label for="confirmPass" class="form-label">Confirm password</label>
-    <input type="password" class="form-control" id="confirmPass" required />
-  </div>
 
-  <button type="button" id="btnRegister" class="btn btn-primary">
-    Register
+  <button type="button" id="btnSignIn" class="btn btn-primary">
+    Login
   </button>
 </form>
-
   `;
 };
 
-export default SignUp;
+export default SignIn;

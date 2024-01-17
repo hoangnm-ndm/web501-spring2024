@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$S01AHXZa.Vi2/y.4tszof.Ri3K4a2T1bTsO2De4u1ic.pGGFU6Xaa",
+      "firstname": "Olivier",
+      "lastname": "Monge",
+      "age": 32,
+      "id": 1
+    },
+    {
+      "email": "olivie@mail.com",
+      "password": "$2a$10$mfKTnI2o7hDhnVDxXZtnyuxKuwdMvH.2qBEI3Loe4qdc0APFLz37e",
+      "id": 2
+    },
+    {
+      "email": "hoangnm@gmail.com",
+      "password": "$2a$10$f/Pqa4VOboxeRcIPpruNFOxFkj.6d16dkEujoV/qPjT3kKXliQpSC",
+      "id": 3
+    },
+    {
+      "email": "hoangnm1@gmail.com",
+      "password": "$2a$10$GnCL823R0xjb2IfZnBGV3u9qR9W/6BKy9FltxJ.YsYz5S6iYXYYiq",
+      "id": 4
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

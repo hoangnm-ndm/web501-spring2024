@@ -13,3 +13,15 @@ export function validRegister(user) {
   }
   return true;
 }
+
+export function validSignIn(user) {
+  if (!user.email || !user.password) {
+    alert("Khong duoc de trong!");
+    return false;
+  }
+  if (user.password.length < 6) {
+    alert("Password phai dai hon 6 ky tu!");
+    return false;
+  }
+  return true;
+}
