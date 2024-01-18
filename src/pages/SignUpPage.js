@@ -1,5 +1,5 @@
 const SignUpPage = () => {
-  return html`
+  return /*html*/ `
     <form action="">
       <h1>Đăng ký tài khoản mới!</h1>
       <div class="mb-3">

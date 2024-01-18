@@ -18,21 +18,21 @@ import showToast from "./src/utils/toastMessage";
 const url = "http://localhost:3000";
 
 const app = document.getElementById("app");
-const products = [];
+let products;
 const router = new Navigo("/", { linksSelector: "a" });
 router.hooks({
   before(done) {
     fetch(`${url}/products`)
       .then((res) => res.json())
       .then((data) => {
-        products.push(...data);
+        products = data;
       });
     done();
   },
 });
 console.log(products.length);
-router.on("/home", () => render(app, HomePage(products)));
-router.on("/about", () => render(app, AboutPage()));
+router.on("/home", () => render(app, () => HomePage(products)));
+router.on("/about", () => render(app, AboutPage));
 router.on("/shop", () => render(app, HomePage));
 router.on("/toast-demo", () => render(app, ShowToast), {
   after() {
@@ -54,14 +54,10 @@ router.on("/toast-demo", () => render(app, ShowToast), {
   },
 });
 router.on("/signup", () => render(app, SignUpPage), {
-  before(done) {
-    () => register();
-    done();
+  after() {
+    const btnRegister = document.getElementById("btnRegister");
+    btnRegister.onclick = register;
   },
-  // after() {
-  //   const btnRegister = document.getElementById("btnRegister");
-  //   btnRegister.onclick = register;
-  // },
 });
 
 router.on("/signin", () => render(app, SignInPage), {

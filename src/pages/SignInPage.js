@@ -1,5 +1,5 @@
 const SignInPage = () => {
-  return html`
+  return /*html*/ `
     <form action="">
       <h1>Login</h1>
       <div class="mb-3">

@@ -1,5 +1,5 @@
 const ShowToast = () => {
-  return html`
+  return /*html*/ `
     <button class="btn-m btn-success-m" id="handleClickSuccess">
       Toast success
     </button>
