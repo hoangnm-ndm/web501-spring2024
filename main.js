@@ -18,22 +18,32 @@ import showToast from "./src/utils/toastMessage";
 const url = "http://localhost:3000";
 
 const app = document.getElementById("app");
-let products;
 const router = new Navigo("/", { linksSelector: "a" });
-router.hooks({
-  before(done) {
+router.on("/home", () => render(app, () => HomePage(products)));
+router.on("/about", () => render(app, AboutPage));
+router.on("/shop", () => render(app, HomePage), {
+  before() {
     fetch(`${url}/products`)
       .then((res) => res.json())
       .then((data) => {
-        products = data;
+        let html = `${data.map((product) => {
+          return /*html*/ `
+          <div>
+            <div class="card">
+              <img src="${product.image}" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text">${product.description}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          `;
+        })}`;
+        console.log(html);
       });
-    done();
   },
 });
-console.log(products.length);
-router.on("/home", () => render(app, () => HomePage(products)));
-router.on("/about", () => render(app, AboutPage));
-router.on("/shop", () => render(app, HomePage));
 router.on("/toast-demo", () => render(app, ShowToast), {
   after() {
     const handleClickSuccess = document.getElementById("handleClickSuccess");
