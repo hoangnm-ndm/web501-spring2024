@@ -3,20 +3,29 @@ import { registerValid } from "../validations/auth.valid";
 var users = [];
 
 function register() {
-  var username = document.getElementById("username").value;
+  var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
   var confirmPass = document.getElementById("confirmPass").value;
 
   var userInfor = {
-    username,
+    email,
     password,
     confirmPass,
   };
 
   if (registerValid(userInfor)) {
-    users.push(userInfor);
-    localStorage.setItem("users", JSON.stringify(users));
-    alert("Dang ky thanh cong!");
+    fetch("http://localhost:3000/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: userInfor.email,
+        password: userInfor.password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   }
 }
 

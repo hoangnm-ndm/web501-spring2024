@@ -1,9 +1,14 @@
 {
   "users": [
     {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$E83pTkYRqFaECjayG6BYYuVKUpfzBsxQpU.jJtoe/wzS72v2cj3bK",
+      "email": "userInfor@gmail.com",
+      "password": "$2a$10$Fkhx6y0EnRyb3.bwIQNSOOQwBUiDd91BOtWr3JtFTnCtZXpdM49uW",
       "id": 1
+    },
+    {
+      "email": "hoangm@gmail.com",
+      "password": "$2a$10$eqzqrm7SwO83N5p3iTvcYOFIONfPA10WsWolTh4SnvI4yPer4vJky",
+      "id": 2
     }
   ],
   "products": [

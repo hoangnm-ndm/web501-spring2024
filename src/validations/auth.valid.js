@@ -1,5 +1,5 @@
 export const registerValid = (user) => {
-  if (user.username === "" || user.password === "" || user.confirmPass === "") {
+  if (user.email === "" || user.password === "" || user.confirmPass === "") {
     alert("khong duoc de trong!");
     return false;
   }

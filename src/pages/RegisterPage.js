@@ -3,12 +3,12 @@ const RegisterPage = () => {
   <form action="">
   <h1>Register</h1>
   <div class="mb-3">
-    <label for="username" class="form-label">Username:</label>
+    <label for="email" class="form-label">Email:</label>
     <input
-      type="text"
+      type="email"
       class="form-control"
-      id="username"
-      placeholder="Your username..."
+      id="email"
+      placeholder="Your email..."
     />
   </div>
 

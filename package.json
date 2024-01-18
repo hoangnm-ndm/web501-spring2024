@@ -7,9 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "server": "json-server --watch db.json --port 3000",
-    "auth": "json-server db.json -m ./node_modules/json-server-auth",
-    "start": "concurrently \"npm run auth\" \"npm run dev\""
+    "server": "json-server db.json -m ./node_modules/json-server-auth",
+    "start": "concurrently \"npm run server\" \"npm run dev\""
   },
   "devDependencies": {
     "vite": "^5.0.8"
