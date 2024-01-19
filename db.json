@@ -42,6 +42,11 @@
       "email": "hoang@mail.com",
       "password": "$2a$10$PYWm9Cf5/BwbXvbpdzOGLO1Divvn.58qUgjSRlYUzaZem5BFoq9XK",
       "id": 8
+    },
+    {
+      "email": "hoangpoly@gmail.com",
+      "password": "$2a$10$2jz6QoqZlfhFkrQxQnZ8MulCJb5JnjjMAkLsrJf8ENmEGLPQDPwSq",
+      "id": 9
     }
   ],
   "products": [

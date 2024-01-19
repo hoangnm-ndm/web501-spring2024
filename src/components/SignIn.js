@@ -8,14 +8,23 @@ function login() {
     password,
   };
   if (validSignIn(user)) {
-    var usersData = JSON.parse(localStorage.getItem("users"));
-    if (usersData && usersData.length > 0) {
-      usersData.some((item) => {
-        if (item.email === email && item.password === password) {
-          alert("Dang nhap thanh cong!");
+    fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        if (data?.user?.email) {
+          alert(`Dang nhap thanh cong, ${data.user.email}`);
+        } else {
+          alert(`Error: Dang nhap that bai!`);
         }
       });
-    }
   }
 }
 export default login;
