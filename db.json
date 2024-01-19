@@ -9,6 +9,11 @@
       "email": "hoangm@gmail.com",
       "password": "$2a$10$eqzqrm7SwO83N5p3iTvcYOFIONfPA10WsWolTh4SnvI4yPer4vJky",
       "id": 2
+    },
+    {
+      "email": "hoangnnnn@gmail.com",
+      "password": "$2a$10$9fvsTv5gVPOvtEjgo3tX2OLNqTUKpGESoztidynETwaF3pLu/azfS",
+      "id": 3
     }
   ],
   "products": [
