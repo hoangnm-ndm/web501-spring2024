@@ -12,7 +12,30 @@ import SignIn from "./src/pages/SignIn.js";
 import login from "./src/components/SignIn.js";
 const app = document.getElementById("app");
 const router = new Navigo("/", { linksSelector: "a" });
-router.on("/home", () => render(app, HomePage));
+router.on("/home", () => render(app, HomePage), {
+  after() {
+    const productList = document.getElementById("productList");
+    console.log(productList);
+    fetch("http://localhost:3000/products")
+      .then((res) => res.json())
+      .then((data) => {
+        const contentHTML = data
+          .map(
+            (product) => `
+          <img src="${product.thumbnail}" />
+          <div class="inner-product">
+          <h2>${product.title}<h2>
+          <p>Giá: ${product.price}<p>
+          <p>Mô tả: ${product.description}<p>
+          </div>
+        `
+          )
+          .join("");
+        // console.log(contentHTML);
+        productList.innerHTML = contentHTML;
+      });
+  },
+});
 router.on("/about", () => render(app, AboutPage));
 router.on("/signup", () => render(app, SignUp), {
   after() {

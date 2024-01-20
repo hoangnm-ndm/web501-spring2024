@@ -1,7 +1,8 @@
 const HomePage = () => {
   // logic code
-  return `
-  <h2>HomePage</h2>
+  return /*html*/ `
+  <h1>Product List</h1>
+  <div id="productList"></div>
   `;
 };
 
