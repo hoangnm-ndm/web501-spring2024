@@ -13,6 +13,8 @@ import login from "./src/components/Login";
 import ProductList from "./src/components/ProductList";
 import ProductDetail from "./src/pages/ProductDetail";
 import productDetail from "./src/components/productDetail";
+import AdminPage from "./src/pages/admin/AdminPage";
+import handleAdminPage from "./src/components/handleAdminPage";
 
 const app = document.getElementById("app");
 
@@ -38,6 +40,11 @@ router.on("/login", () => render(app, SignIn), {
   after: () => {
     const btnSignIn = document.getElementById("btnSignIn");
     btnSignIn.onclick = login;
+  },
+});
+router.on("/admin", () => render(app, AdminPage), {
+  after() {
+    handleAdminPage();
   },
 });
 router.notFound(() => render(app, NotFoundPage));
