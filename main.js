@@ -15,6 +15,7 @@ import ProductDetail from "./src/pages/ProductDetail";
 import productDetail from "./src/components/productDetail";
 import AdminPage from "./src/pages/admin/AdminPage";
 import handleAdminPage from "./src/components/handleAdminPage";
+import ProductForm from "./src/pages/admin/ProductForm";
 
 const app = document.getElementById("app");
 
@@ -27,6 +28,10 @@ router.on("/home", () => router.navigate("/"));
 router.on("/products/:id", (data) => {
   render(app, ProductDetail);
   productDetail(data);
+});
+router.on("/products-form/:id", (data) => {
+  render(app, ProductForm);
+  productFormHandle(data);
 });
 router.on("/about", () => render(app, AboutPage));
 router.on("/register", () => render(app, SignUp), {

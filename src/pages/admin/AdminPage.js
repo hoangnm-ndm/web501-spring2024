@@ -1,6 +1,7 @@
 const AdminPage = () => {
   return `
-  <div id="productList"></div>
+  <div id="productList">
+  </div>
   `;
 };
 
