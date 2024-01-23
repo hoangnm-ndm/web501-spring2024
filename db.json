@@ -1,47 +1,5 @@
 {
-  "users": [
-    {
-      "email": "userInfor@gmail.com",
-      "password": "$2a$10$Fkhx6y0EnRyb3.bwIQNSOOQwBUiDd91BOtWr3JtFTnCtZXpdM49uW",
-      "id": 1
-    },
-    {
-      "email": "hoangm@gmail.com",
-      "password": "$2a$10$eqzqrm7SwO83N5p3iTvcYOFIONfPA10WsWolTh4SnvI4yPer4vJky",
-      "id": 2
-    },
-    {
-      "email": "hoangnnnn@gmail.com",
-      "password": "$2a$10$9fvsTv5gVPOvtEjgo3tX2OLNqTUKpGESoztidynETwaF3pLu/azfS",
-      "id": 3
-    },
-    {
-      "email": "hoang@gmail.com",
-      "password": "$2a$10$S89yAe47tySCFZS4Awy2YOG2yvnyC9zNs4k5DHEfqqLYAkQP3WhPi",
-      "username": "hoangnm.bg",
-      "id": 4
-    },
-    {
-      "email": "wd18337@gmail.com",
-      "password": "$2a$10$vSHKElfV9qAiSUs7wXD7ne5b/SYgIfOoTCOcGcqxZm2h0dcCH2ss6",
-      "id": 5
-    },
-    {
-      "email": "hoang1111@gmail.com",
-      "password": "$2a$10$MAZCVg8EqFP9Atvt23f1J.FrMTTeCL8xSmeYQxOuoAuMvV4VI3u66",
-      "id": 6
-    },
-    {
-      "email": "sadsa@gmail.com",
-      "password": "$2a$10$uFWrJPJ3NntQaslkcy42gu4sqhmNXQIIxhn3iL5.5wXOrzsCXYBay",
-      "id": 7
-    },
-    {
-      "email": "wd@gmail.com",
-      "password": "$2a$10$9L93YmPgYiOt4tujO9HpQO6i9Ss5OQF6xDq68FKDjujavBDNQG7qO",
-      "id": 8
-    }
-  ],
+  "users": [],
   "products": [
     {
       "id": 1,
@@ -91,9 +49,7 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/3/1.jpg"
-      ]
+      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
     },
     {
       "id": 4,
