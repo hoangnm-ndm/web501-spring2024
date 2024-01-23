@@ -1,8 +1,23 @@
 import { getAll } from "../api/product.api";
+import { instance } from "../utils/common";
 
 const ProductList = () => {
   const productList = document.getElementById("productList");
   console.log(productList);
+  instance.get("/products").then(({ data }) => {
+    console.log(data);
+  });
+
+  instance
+    .post("/products", {
+      title: "Test",
+      price: 1000,
+      thumbnail: "https://picsum.photos/200",
+      description: "Test",
+    })
+    .then((data) => {
+      console.log(data);
+    });
   getAll().then(({ data }) => {
     const contentHTML = data
       .map(

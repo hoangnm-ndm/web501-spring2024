@@ -1,4 +1,4 @@
-import { deleteOne, getAll, updateOne } from "../api/product.api";
+import { deleteOne, getAll } from "../api/product.api";
 import { router } from "../utils/common";
 
 const handleAdminPage = () => {
