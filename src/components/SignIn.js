@@ -1,19 +1,35 @@
 import { signInValid } from "../validations/auth.valid";
 
 function signIn() {
-  var username = document.getElementById("username").value;
+  var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
 
-  if (signInValid({ username, password })) {
-    if (localStorage.getItem("users")) {
-      var dataLocalStorage = JSON.parse(localStorage.getItem("users"));
-      dataLocalStorage.some((item) => {
-        if (item.username === username && item.password === password) {
-          alert("Dang nhap thanh cong!");
-          return;
+  const user = {
+    email,
+    password,
+  };
+
+  if (signInValid(user)) {
+    fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.user) {
+          const confirmValue = confirm(
+            `Đăng nhập thành công, chuyển đến trang chủ?`
+          );
+          if (confirmValue) {
+            window.location.href = "/";
+          }
+        } else {
+          alert(data);
         }
       });
-    }
   }
 }
 

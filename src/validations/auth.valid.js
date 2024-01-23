@@ -15,7 +15,7 @@ export const registerValid = (user) => {
 };
 
 export const signInValid = (user) => {
-  if (user.username === "" || user.password === "") {
+  if (user.email === "" || user.password === "") {
     alert("khong duoc de trong!");
     return false;
   }

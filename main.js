@@ -25,7 +25,7 @@ router.on("/signup", () => render(app, RegisterPage), {
     btnRegister.onclick = register;
   },
 });
-router.on("/signin", () => render(app, SignInPage), {
+router.on("/login", () => render(app, SignInPage), {
   after() {
     const btnSignIn = document.getElementById("btnSignIn");
     btnSignIn.onclick = signIn;

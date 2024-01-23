@@ -1,7 +1,5 @@
 import { registerValid } from "../validations/auth.valid";
 
-var users = [];
-
 function register() {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
@@ -10,22 +8,29 @@ function register() {
   var userInfor = {
     email,
     password,
-    confirmPass,
   };
 
-  if (registerValid(userInfor)) {
+  if (registerValid({ ...userInfor, confirmPass })) {
     fetch("http://localhost:3000/register", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({
-        email: userInfor.email,
-        password: userInfor.password,
-      }),
+      body: JSON.stringify(userInfor),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if (data.user) {
+          const confirmValue = confirm(
+            `Đăng ký thành công, bạn có muốn đăng nhập không?`
+          );
+          if (confirmValue) {
+            window.location.href = "/login";
+          }
+        } else {
+          alert(data);
+        }
+      });
   }
 }
 
