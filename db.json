@@ -30,6 +30,16 @@
       "email": "wd@gmail.com",
       "password": "$2a$10$9L93YmPgYiOt4tujO9HpQO6i9Ss5OQF6xDq68FKDjujavBDNQG7qO",
       "id": 8
+    },
+    {
+      "email": "hoang000@gmail.com",
+      "password": "$2a$10$VK4Jagpj4Wfmn3h6IsNSVudaqfVt0kWOVpLCsi/GCgPPvdV4Zl3by",
+      "id": 9
+    },
+    {
+      "email": "hoang001@gmail.com",
+      "password": "$2a$10$s1ijuyw/TfGFky.axi3ZWubaIZyvpBPMTQGj9Owl0BxFhk.aD0gFC",
+      "id": 10
     }
   ],
   "products": [
@@ -81,7 +91,9 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
+      "images": [
+        "https://cdn.dummyjson.com/product-images/3/1.jpg"
+      ]
     },
     {
       "id": 4,

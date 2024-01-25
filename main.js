@@ -4,7 +4,7 @@ import "./style.css";
 import AboutPage from "./src/pages/AboutPage";
 import Navigo from "navigo";
 import HomePage from "./src/pages/HomePage.js";
-import { render } from "./src/utils/common.js";
+import { render, router } from "./src/utils/common.js";
 import NotFoundPage from "./src/pages/NotFoundPage.js";
 import RegisterPage from "./src/pages/RegisterPage.js";
 import ContactPage from "./src/pages/ContactPage.js";
@@ -12,7 +12,6 @@ import register from "./src/components/Register.js";
 import SignInPage from "./src/pages/SignInPage.js";
 import signIn from "./src/components/SignIn.js";
 
-const router = new Navigo("/", { linksSelector: "a" });
 const app = document.getElementById("app");
 
 router.on("/", () => render(app, HomePage));
