@@ -1,3 +1,4 @@
+import instance from "../apis";
 import { router } from "../utils/common";
 import { signInValid } from "../validations/auth.valid";
 
@@ -33,26 +34,20 @@ async function signIn() {
     //   })
     //   .catch((error) => console.log(error));
 
-    const res = await fetch("http://localhost:3000/login", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
-
-    const data = await res.json();
-    if (data.user) {
-      console.log(data);
-      const confirmValue = confirm(
-        `Đăng nhập thành công, chuyển đến trang chủ?`
-      );
-      if (confirmValue) {
-        router.navigate("/");
-      }
-    } else {
-      alert(`Error: ${data}`);
-    }
+    instance
+      .post("/login", user)
+      .then((res) => {
+        if (res?.data?.user) {
+          const confirmValue = confirm(
+            `Đăng nhập thành công, chuyển đến trang chủ?`
+          );
+          if (confirmValue) {
+            router.navigate("/");
+          }
+          return;
+        }
+      })
+      .catch((error) => alert(`Error: ${error}`));
   }
 }
 
