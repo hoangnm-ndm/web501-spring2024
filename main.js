@@ -2,6 +2,7 @@ import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./node_modules/bootstrap/dist/js/bootstrap.js";
 import register from "./src/components/Register.js";
 import login from "./src/components/SignIn.js";
+import handleProductList from "./src/components/handleProductList";
 import AboutPage from "./src/pages/AboutPage.js";
 import HomePage from "./src/pages/HomePage.js";
 import NotFoundPage from "./src/pages/NotFoundPage.js";
@@ -13,26 +14,7 @@ const app = document.getElementById("app");
 
 router.on("/home", () => render(app, HomePage), {
   after() {
-    const productList = document.getElementById("productList");
-    console.log(productList);
-    fetch("http://localhost:3000/products")
-      .then((res) => res.json())
-      .then((data) => {
-        const contentHTML = data
-          .map(
-            (product) => `
-          <img src="${product.thumbnail}" />
-          <div class="inner-product">
-          <h2>${product.title}<h2>
-          <p>Giá: ${product.price}<p>
-          <p>Mô tả: ${product.description}<p>
-          </div>
-        `
-          )
-          .join("");
-        // console.log(contentHTML);
-        productList.innerHTML = contentHTML;
-      });
+    handleProductList();
   },
 });
 router.on("/", router.navigate("/home"));
