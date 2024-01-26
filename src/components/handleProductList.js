@@ -1,10 +1,11 @@
+import api from "../apis";
+
 const handleProductList = async () => {
   const productList = document.getElementById("productList");
   try {
     // Bước 1: fetch data
-    const res = await fetch("http://localhost:3000/products");
-    const data = await res.json();
-
+    const { data } = await api.get("/products");
+    // ! destructuring
     // Bước 2: Lấy được data thì map thành content
     const contentHTML = data
       .map(

@@ -8,14 +8,18 @@ function register() {
   var user = {
     email,
     password,
-    confirmPass,
   };
 
-  if (validRegister(user)) {
+  if (validRegister({ ...user, confirmPass })) {
     fetch("http://localhost:3000/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: user.email, password: user.password }),
+      body: JSON.stringify({
+        ...user,
+        address: "",
+        role: "member",
+        cart: [],
+      }),
     })
       .then((res) => res.json())
       .then((data) => {
