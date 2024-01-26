@@ -1,3 +1,4 @@
+import { router } from "../utils/common";
 import { validSignIn } from "../validations/auth.valid";
 
 function login() {
@@ -15,15 +16,22 @@ function login() {
       },
       body: JSON.stringify(user),
     })
-      .then((response) => {
-        return response.json();
-      })
+      .then((res) => res.json())
       .then((data) => {
-        if (data?.user?.email) {
-          alert(`Dang nhap thanh cong, ${data.user.email}`);
+        if (data && data.user) {
+          sessionStorage.setItem("user", data.user);
+          const confirmValue = confirm(
+            `Dang nhap thanh cong, có muốn chuyển sang trang mua sắm không?, ${data.user.email}`
+          );
+          if (confirmValue) {
+            router.navigate("/home");
+          }
         } else {
-          alert(`Error: Dang nhap that bai!`);
+          alert(data);
         }
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }
 }

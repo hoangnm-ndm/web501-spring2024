@@ -1,3 +1,4 @@
+import { router } from "../utils/common";
 import { validRegister } from "../validations/auth.valid";
 
 function register() {
@@ -18,8 +19,13 @@ function register() {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (typeof data.user !== "undefined") {
-          alert(`Dang ky thanh cong!, ${data.user.email}`);
+        if (data && data.user) {
+          const confirmValue = confirm(
+            `Dang ky thanh cong, có muốn chuyển sang trang login không?, ${data.user.email}`
+          );
+          if (confirmValue) {
+            router.navigate("/signin");
+          }
         } else {
           alert(data);
         }

@@ -47,6 +47,21 @@
       "email": "hoangpoly@gmail.com",
       "password": "$2a$10$2jz6QoqZlfhFkrQxQnZ8MulCJb5JnjjMAkLsrJf8ENmEGLPQDPwSq",
       "id": 9
+    },
+    {
+      "email": "hoang@gmail.com",
+      "password": "$2a$10$II74ryREc9Yw0/EQkbaMFu7hJqTrScHkGqslqXX9o5kFVCacLzmt2",
+      "id": 10
+    },
+    {
+      "email": "locfuho@gmail.com",
+      "password": "$2a$10$UfzhlNXA8W/L2pZf0wgfSOK2l2cxqXI.Ppz9pfSbt9kZlUk/yXw2G",
+      "id": 11
+    },
+    {
+      "email": "hoangnm62@gmail.com",
+      "password": "$2a$10$ltTRtgNiFoGClYYJUxj4BuZ8LjFY95yjYWm28lXtgAJLA2hKKGzfa",
+      "id": 12
     }
   ],
   "products": [
