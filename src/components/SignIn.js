@@ -12,42 +12,36 @@ async function signIn() {
   };
 
   if (signInValid(user)) {
-    // fetch("http://localhost:3000/login", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(user),
-    // })
-    //   .then((res) => res.json()) // một việc phải chờ đợi
-    //   .then((data) => {
-    //     if (data.user) {
+    // ! Dùng axios
+    // instance
+    //   .post("/login", user)
+    //   .then((res) => {
+    //     if (res?.data?.user) {
     //       const confirmValue = confirm(
     //         `Đăng nhập thành công, chuyển đến trang chủ?`
     //       );
     //       if (confirmValue) {
-    //         window.location.href = "/";
+    //         router.navigate("/");
     //       }
-    //     } else {
-    //       alert(data);
     //     }
     //   })
-    //   .catch((error) => console.log(error));
+    //   .catch((error) => alert(`Error: ${error}`));
+    // ! Dùng axios và cú pháp async / await
 
-    instance
-      .post("/login", user)
-      .then((res) => {
-        if (res?.data?.user) {
-          const confirmValue = confirm(
-            `Đăng nhập thành công, chuyển đến trang chủ?`
-          );
-          if (confirmValue) {
-            router.navigate("/");
-          }
-          return;
+    try {
+      const { data } = await instance.post("/login", user);
+      if (data?.user) {
+        const confirmValue = confirm(
+          `Đăng nhập thành công, chuyển đến trang chủ?`
+        );
+        if (confirmValue) {
+          router.navigate("/");
         }
-      })
-      .catch((error) => alert(`Error: ${error}`));
+      }
+    } catch (error) {
+      console.log(error);
+      alert(`Error: ${error?.response?.data || "Failed!"}`);
+    }
   }
 }
 

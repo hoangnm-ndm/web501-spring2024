@@ -40,6 +40,11 @@
       "email": "hoang001@gmail.com",
       "password": "$2a$10$s1ijuyw/TfGFky.axi3ZWubaIZyvpBPMTQGj9Owl0BxFhk.aD0gFC",
       "id": 10
+    },
+    {
+      "email": "hoang123@gmail.com",
+      "password": "$2a$10$cbwalQ2IGEhcbPPD8h91pepZNABkBaL/WazsSNf7RyaskCr2.h.n2",
+      "id": 11
     }
   ],
   "products": [
