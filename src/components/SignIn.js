@@ -31,6 +31,7 @@ async function signIn() {
     try {
       const { data } = await instance.post("/login", user);
       if (data?.user) {
+        sessionStorage.setItem("user", JSON.stringify(data));
         const confirmValue = confirm(
           `Đăng nhập thành công, chuyển đến trang chủ?`
         );

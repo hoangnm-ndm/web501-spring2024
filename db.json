@@ -45,6 +45,24 @@
       "email": "hoang123@gmail.com",
       "password": "$2a$10$cbwalQ2IGEhcbPPD8h91pepZNABkBaL/WazsSNf7RyaskCr2.h.n2",
       "id": 11
+    },
+    {
+      "email": "hoang1234@gmail.com",
+      "password": "$2a$10$ZMQcAg4kq.U.Sp.1UU.SX.RQXosnJyViQMAeB6T.aAHqmGXv/jCt2",
+      "id": 12
+    },
+    {
+      "email": "hoang1223456@gmail.com",
+      "password": "$2a$10$XOFMVg633RxZEdMGkEVI7uGlycfk9oWMvFu8.ZGSSVk3ErtYit7xC",
+      "id": 13
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$tP1M3lFTpzDHO84PvzTQ2eYfn2byAbjVILjboEQNHwyOdCrzA95e2",
+      "address": "",
+      "phoneNumber": "",
+      "role": "member",
+      "id": 14
     }
   ],
   "products": [
