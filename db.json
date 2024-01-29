@@ -77,7 +77,7 @@
       "email": "taikhoanao@gmail.com",
       "password": "$2a$10$w0rz/brOIdgIpHY84Ip40e8flNQw0ljkh57YjWTqEPw.V.v1rtjR2",
       "address": "",
-      "role": "member",
+      "role": "admin",
       "cart": [],
       "history": [],
       "phoneNumber": "",
@@ -133,9 +133,7 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/3/1.jpg"
-      ]
+      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
     },
     {
       "id": 4,
