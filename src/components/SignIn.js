@@ -1,38 +1,32 @@
+import api from "../apis";
 import { router } from "../utils/common";
 import { validSignIn } from "../validations/auth.valid";
 
-function login() {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  var user = {
-    email,
-    password,
-  };
-  if (validSignIn(user)) {
-    fetch("http://localhost:3000/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data && data.user) {
-          sessionStorage.setItem("user", data.user);
-          const confirmValue = confirm(
-            `Dang nhap thanh cong, có muốn chuyển sang trang mua sắm không?, ${data.user.email}`
-          );
-          if (confirmValue) {
-            router.navigate("/home");
-          }
-        } else {
-          alert(data);
+async function login() {
+  try {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var user = {
+      email,
+      password,
+    };
+    if (validSignIn(user)) {
+      const { data } = await api.post("/login", user);
+      if (data && data.user) {
+        sessionStorage.setItem("user", JSON.stringify(data));
+        const confirmValue = confirm(
+          "Đăng nhập thành công, có muốn chuyển sang trang home không?"
+        );
+        if (confirmValue) {
+          router.navigate("/home");
         }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      } else {
+        alert(data);
+        // data nếu không có user bên trong thì thường data là string "Email không đúng định dạng..."
+      }
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
 export default login;

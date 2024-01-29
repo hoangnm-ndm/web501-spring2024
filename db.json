@@ -62,6 +62,26 @@
       "email": "hoangnm62@gmail.com",
       "password": "$2a$10$ltTRtgNiFoGClYYJUxj4BuZ8LjFY95yjYWm28lXtgAJLA2hKKGzfa",
       "id": 12
+    },
+    {
+      "email": "taikhoanmoi@gmail.com",
+      "password": "$2a$10$NGhT6uGpQTNsVCRgYqYmEuc49onF3cygtGurqwKn0V/vQa/oyyXoK",
+      "address": "",
+      "role": "member",
+      "cart": [],
+      "history": [],
+      "phoneNumber": "",
+      "id": 13
+    },
+    {
+      "email": "taikhoanao@gmail.com",
+      "password": "$2a$10$w0rz/brOIdgIpHY84Ip40e8flNQw0ljkh57YjWTqEPw.V.v1rtjR2",
+      "address": "",
+      "role": "member",
+      "cart": [],
+      "history": [],
+      "phoneNumber": "",
+      "id": 14
     }
   ],
   "products": [
