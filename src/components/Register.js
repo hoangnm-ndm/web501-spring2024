@@ -13,35 +13,12 @@ async function register() {
     };
 
     if (registerValid({ ...user, confirmPass })) {
-      // fetch("http://localhost:3000/register", {
-      //   method: "POST",
-      //   headers: {
-      //     "content-type": "application/json",
-      //   },
-      //   body: JSON.stringify(userInfor),
-      // })
-      //   .then((res) => res.json())
-      //   .then((data) => {
-      //     if (data.user) {
-      //       const confirmValue = confirm(
-      //         `Đăng ký thành công, bạn có muốn đăng nhập không?`
-      //       );
-      //       if (confirmValue) {
-      //         window.location.href = "/login";
-      //       }
-      //     } else {
-      //       alert(data);
-      //     }
-      //   });
-      // ! Dùng axios
       const { data } = await instance.post("/register", {
         ...user,
         address: "",
         phoneNumber: "",
         role: "member",
       });
-      // ! Destructuring
-      // ! "..." Spread operator
       if (data?.user) {
         const confirmValue = confirm(
           `Đăng ký thành công, chuyển đến trang đăng nhập?`
@@ -52,7 +29,8 @@ async function register() {
       }
     }
   } catch (error) {
-    alert(`Error: ${error?.response?.data || "Failed!"}`);
+    console.log(error);
+    // alert(`Error: ${error?.response?.data || "Failed!"}`);
   }
 }
 

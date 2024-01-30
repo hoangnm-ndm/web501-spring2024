@@ -12,22 +12,6 @@ async function signIn() {
   };
 
   if (signInValid(user)) {
-    // ! Dùng axios
-    // instance
-    //   .post("/login", user)
-    //   .then((res) => {
-    //     if (res?.data?.user) {
-    //       const confirmValue = confirm(
-    //         `Đăng nhập thành công, chuyển đến trang chủ?`
-    //       );
-    //       if (confirmValue) {
-    //         router.navigate("/");
-    //       }
-    //     }
-    //   })
-    //   .catch((error) => alert(`Error: ${error}`));
-    // ! Dùng axios và cú pháp async / await
-
     try {
       const { data } = await instance.post("/login", user);
       if (data?.user) {
