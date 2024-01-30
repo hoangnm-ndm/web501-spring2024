@@ -2,7 +2,6 @@ import "./node_modules/bootstrap/dist/js/bootstrap.min.js";
 import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import AboutPage from "./src/pages/AboutPage";
-import Navigo from "navigo";
 import HomePage from "./src/pages/HomePage.js";
 import { render, router } from "./src/utils/common.js";
 import NotFoundPage from "./src/pages/NotFoundPage.js";
@@ -13,11 +12,23 @@ import SignInPage from "./src/pages/SignInPage.js";
 import signIn from "./src/components/SignIn.js";
 import AdminDashboard from "./src/pages/admin/AdminDashboard.js";
 import handleAdmin from "./src/components/handleAdmin.js";
+import handleProductList from "./src/components/handleProductList.js";
+import ProductDetail from "./src/pages/ProductDetail.js";
+import handleProductDetail from "./src/components/handleProductDetail.js";
 
 const app = document.getElementById("app");
 
-router.on("/", () => render(app, HomePage));
+router.on("/", () => render(app, HomePage), {
+  after() {
+    handleProductList();
+  },
+});
 router.on("/home", () => router.navigate("/"));
+router.on("/detail/:id", () => render(app, ProductDetail), {
+  after(data) {
+    handleProductDetail(data);
+  },
+});
 router.on("/contact", () => render(app, ContactPage));
 router.on("/about", () => render(app, AboutPage));
 router.on("/signup", () => render(app, RegisterPage), {
