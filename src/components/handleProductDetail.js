@@ -3,9 +3,8 @@ import instance from "../apis";
 const handleProductDetail = async (data) => {
   const productElement = document.getElementById("productDetail");
   const id = data.data.id;
-  const res = await instance.get(`/products/${id}`);
-  const product = res.data;
-  const contentHTML = `
+  const { data: product } = await instance.get(`/products/${id}`);
+  const contentHTML = /*html*/ `
   <div class="container">
     <div class="row">
       <div class="col-6">
@@ -17,8 +16,6 @@ const handleProductDetail = async (data) => {
       </div>
     </div>
   </div>
-  
-  
   `;
   productElement.innerHTML = contentHTML;
 };
