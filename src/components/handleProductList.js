@@ -9,12 +9,13 @@ const handleProductList = async () => {
     // Bước 2: Lấy được data thì map thành content
     const contentHTML = data
       .map(
-        (product) => `
+        (product) => /*html*/ `
           <img src="${product.thumbnail}" />
           <div class="inner-product">
           <h2>${product.title}<h2>
           <p>Giá: ${product.price}<p>
           <p>Mô tả: ${product.description}<p>
+          <a href="/detail/${product.id}" class="btn btn-success">Xem chi tiết</a>
           </div>
         `
       )

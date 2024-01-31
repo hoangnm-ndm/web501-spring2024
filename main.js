@@ -2,8 +2,10 @@ import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./node_modules/bootstrap/dist/js/bootstrap.js";
 import register from "./src/components/Register.js";
 import login from "./src/components/SignIn.js";
+import handleProductDetail from "./src/components/handleProductDetail";
 import handleProductList from "./src/components/handleProductList";
 import AboutPage from "./src/pages/AboutPage.js";
+import DetailPage from "./src/pages/DetailPage";
 import HomePage from "./src/pages/HomePage.js";
 import NotFoundPage from "./src/pages/NotFoundPage.js";
 import SignIn from "./src/pages/SignIn.js";
@@ -36,7 +38,6 @@ router.on("/admin", () => render(app, Dashboad), {
   // checkPermission:
   before(done) {
     const user = JSON.parse(sessionStorage.getItem("user"));
-    console.log(user);
     if (user && user.user.role === "admin") {
       console.log(user.user);
       done();
@@ -49,6 +50,12 @@ router.on("/admin", () => render(app, Dashboad), {
 router.on("logout", () => {
   sessionStorage.removeItem("user");
   router.navigate("/signin");
+});
+
+router.on("/detail/:id", () => render(app, DetailPage), {
+  after(data) {
+    handleProductDetail(data.data.id);
+  },
 });
 router.notFound(() => render(app, NotFoundPage));
 router.resolve();

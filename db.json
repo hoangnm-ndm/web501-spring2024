@@ -1,69 +1,6 @@
 {
   "users": [
     {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$S01AHXZa.Vi2/y.4tszof.Ri3K4a2T1bTsO2De4u1ic.pGGFU6Xaa",
-      "firstname": "Olivier",
-      "lastname": "Monge",
-      "age": 32,
-      "id": 1
-    },
-    {
-      "email": "olivie@mail.com",
-      "password": "$2a$10$mfKTnI2o7hDhnVDxXZtnyuxKuwdMvH.2qBEI3Loe4qdc0APFLz37e",
-      "id": 2
-    },
-    {
-      "email": "hoangnm@gmail.com",
-      "password": "$2a$10$f/Pqa4VOboxeRcIPpruNFOxFkj.6d16dkEujoV/qPjT3kKXliQpSC",
-      "id": 3
-    },
-    {
-      "email": "hoangnm1@gmail.com",
-      "password": "$2a$10$GnCL823R0xjb2IfZnBGV3u9qR9W/6BKy9FltxJ.YsYz5S6iYXYYiq",
-      "id": 4
-    },
-    {
-      "email": "hoangnm111@gmail.com",
-      "password": "$2a$10$Wvv/6GyeJ1nlBSP3TGpiOeeR7Vle9TXTJurphyxhikztz.zw9Zk9e",
-      "id": 5
-    },
-    {
-      "email": "hoangnm111222@gmail.com",
-      "password": "$2a$10$.l2qSl1D1kmUWiZZ.tJX/OG58h8vHrDYTdPIXm7zjXvsdCwGSw4wi",
-      "id": 6
-    },
-    {
-      "email": "hoangnm1213232@gmail.com",
-      "password": "$2a$10$77tcWYlpEnhloxv8mZ1xKORzZ.Ic6CtFJo0PqGeitT4xbmQjRwpbO",
-      "id": 7
-    },
-    {
-      "email": "hoang@mail.com",
-      "password": "$2a$10$PYWm9Cf5/BwbXvbpdzOGLO1Divvn.58qUgjSRlYUzaZem5BFoq9XK",
-      "id": 8
-    },
-    {
-      "email": "hoangpoly@gmail.com",
-      "password": "$2a$10$2jz6QoqZlfhFkrQxQnZ8MulCJb5JnjjMAkLsrJf8ENmEGLPQDPwSq",
-      "id": 9
-    },
-    {
-      "email": "hoang@gmail.com",
-      "password": "$2a$10$II74ryREc9Yw0/EQkbaMFu7hJqTrScHkGqslqXX9o5kFVCacLzmt2",
-      "id": 10
-    },
-    {
-      "email": "locfuho@gmail.com",
-      "password": "$2a$10$UfzhlNXA8W/L2pZf0wgfSOK2l2cxqXI.Ppz9pfSbt9kZlUk/yXw2G",
-      "id": 11
-    },
-    {
-      "email": "hoangnm62@gmail.com",
-      "password": "$2a$10$ltTRtgNiFoGClYYJUxj4BuZ8LjFY95yjYWm28lXtgAJLA2hKKGzfa",
-      "id": 12
-    },
-    {
       "email": "taikhoanmoi@gmail.com",
       "password": "$2a$10$NGhT6uGpQTNsVCRgYqYmEuc49onF3cygtGurqwKn0V/vQa/oyyXoK",
       "address": "",

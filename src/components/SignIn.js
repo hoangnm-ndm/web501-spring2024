@@ -14,11 +14,17 @@ async function login() {
       const { data } = await api.post("/login", user);
       if (data && data.user) {
         sessionStorage.setItem("user", JSON.stringify(data));
-        const confirmValue = confirm(
-          "Đăng nhập thành công, có muốn chuyển sang trang home không?"
-        );
-        if (confirmValue) {
-          router.navigate("/home");
+        console.log(data?.user?.role);
+        if (data?.user?.role === "admin") {
+          console.log(data?.user?.role);
+          window.location.href = "/admin";
+        } else {
+          const confirmValue = confirm(
+            "Đăng nhập thành công, có muốn chuyển sang trang home không?"
+          );
+          if (confirmValue) {
+            router.navigate("/home");
+          }
         }
       } else {
         alert(data);
