@@ -15,7 +15,7 @@ const handleProductList = async () => {
             <div>Giá: ${item.price}</div>
             <p>Mô tả: ${item.description}</p>
           </div>
-         </div>
+        </div>
         `
       )
       .join("");
